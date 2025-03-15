@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Thunderdome 
 
-## Getting Started
+## Project Description
+Provide a brief overview of your project. What does it do? What problem does it aim to solve?
 
-First, run the development server:
+## Team Members
+- [Your Name]
+- [Team Member 1]
+- [Team Member 2]
+- [Team Member 3]
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Tech Stack](#tech-stack)
+3. [Features](#features)
+4. [How to Run](#how-to-run)
+5. [Challenges & Solutions](#challenges--solutions)
+6. [Future Improvements](#future-improvements)
+7. [Screenshots/Demo](#screenshotsdemo)
+8. [Acknowledgments](#acknowledgments)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Introduction
+Describe your project in a few sentences. What problem does it solve? Why is it useful?
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Demonstration
 
-## Learn More
+## Tech Stack
+List the technologies, frameworks, and tools used, e.g.,
+- Frontend: React, Tailwind CSS
+- Backend: Node.js, Express
+- Database: PostgreSQL
+- APIs: OpenAI API, Firebase
 
-To learn more about Next.js, take a look at the following resources:
+## Features
+- [Feature 1]
+- [Feature 2]
+- [Feature 3]
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How to Run
+Although you won't be able to access the thunderdome explicitly, feel free to view our website on https://tardis-hackathon-6drl.vercel.app/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Acknowledgments
+Shoutout to mentors, resources, or anything that helped your team!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
