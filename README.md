@@ -6,17 +6,18 @@ Provide a brief overview of your project. What does it do? What problem does it 
 ## Demonstration
 
 ## Team Members
-- [Your Name]
+- Hana Ahmed-Mahmoud
 - [Team Member 1]
 - [Team Member 2]
 - [Team Member 3]
+- [Team Member 4]
 
-## Tech Stack
-List the technologies, frameworks, and tools used, e.g.,
+## Tech Stack/ Skills
 - Frontend: React, Tailwind CSS
-- Backend: Node.js, Express
-- Database: PostgreSQL
-- APIs: OpenAI API, Firebase
+- Backend: Node.js
+- Hardware: 
+- APIs: OpenMeteo
+- Design and Graphics: Canvas
 
 ## Features
 - [Feature 1]
