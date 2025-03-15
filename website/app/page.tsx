@@ -6,7 +6,7 @@ export default function Start() {
       className={`${font.className} flex flex-col justify-center items-center h-screen`}
     >
       <h1 className="text-[#a31010] text-8xl text-center my-5">
-        ENTER THE THUNERDOME
+        ENTER THE THUNDERDOME
       </h1>
       <h3 className="text-[#ffbd59] text-2xl text-center my-5">
         be reborn through the weather
