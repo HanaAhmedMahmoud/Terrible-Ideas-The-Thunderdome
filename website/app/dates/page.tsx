@@ -17,8 +17,8 @@ export default function Home() {
     /* some function to get parameters */
     const params = new URLSearchParams({
       tsunami: 'false',
-      volcano: 'true',
-      earthquake: 'false',
+      volcano: 'false',
+      earthquake: 'true',
       meteor: 'false',
       noDisastor: 'false',
       windSpeed: '10',

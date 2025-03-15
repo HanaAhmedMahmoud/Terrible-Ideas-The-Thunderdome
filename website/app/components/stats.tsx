@@ -97,16 +97,16 @@ export default function Stats() {
           )}
           {earthquakeParam && (
              <div className="w-full">
-             <h1 className="text-[#ba0e02] text-7xl absolute top-0 right-0 m-20">EARTHQUAKE</h1>
+             <h1 className="text-[#ba8602] text-9xl absolute top-0 left-0 m-20">EARTHQUAKE</h1>
              <Image
                src="/images/earthquake.gif"
-               width={1000}
+               width={500}
                height={200}
                alt="sun"
-               className="z-0 absolute top-0 right-0"
+               className="z-0 absolute top-0 right-0 m-20"
              />
            
-             <div className="mt-20 mr-140 flex flex-col justify-center items-center"> 
+             <div className="mt-70 mr-140 flex flex-col justify-center items-center"> 
              <video width="700" controls>
                  <source src="/videos/earthquake.mp4" type="video/mp4" />
                  Your browser does not support the video tag.
