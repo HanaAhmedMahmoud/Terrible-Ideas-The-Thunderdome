@@ -19,25 +19,45 @@ export default function Stats() {
 
   const divs = [
     <div key={0}>
-      <h1 className="text-[#a31010] text-8xl text-center my-10">
-        ITS YOUR DAY!
+      <h1 className="text-[#a31010] text-9xl text-center my-10">
+        IT&apos;S YOUR DAY!
       </h1>
     </div>,
-    <div key={1}>
-      <h1 className="text-[#cfe6ff] text-5xl">
+    <div key={1} className="relative flex flex-col items-center">
+      <h1 className="text-[#cfe6ff] text-5xl  absolute top-10 z-10 text-center">
         The wind speed was {windSpeedParam} km/h
       </h1>
-      <Image src="/images/wind.svg" width={560} height={620} alt="wind" />
+      <Image
+        src="/images/wind.svg"
+        width={560}
+        height={620}
+        className="z-0"
+        alt="wind"
+      />
     </div>,
-    <div key={2}>
-      <h1 className="text-[#ffbd59] text-5xl">
+    <div key={2} className="relative flex flex-col items-center">
+      <h1 className="text-[#ffbd59] text-5xl my-50 absolute top-10 z-10 drop-shadow-[2px_2px_0px_black]">
         The temperature was {temperatureParam}°C
       </h1>
+      <Image
+        src="/images/sun.svg"
+        width={560}
+        height={620}
+        alt="sun"
+        className="z-0"
+      />
     </div>,
-    <div key={3}>
-      <h1 className="text-[#d9d9d9] text-5xl">
+    <div key={3} className="relative flex flex-col items-center">
+      <h1 className="text-[#d9d9d9] text-5xl my-70 absolute top-10 z-10">
         The cloud cover was {cloudCoverParam} Oktas
       </h1>
+      <Image
+        src="/images/cloud.svg"
+        width={560}
+        height={620}
+        alt="sun"
+        className="z-0"
+      />
     </div>,
   ];
 

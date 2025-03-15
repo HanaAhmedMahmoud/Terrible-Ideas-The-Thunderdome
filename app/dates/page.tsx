@@ -15,11 +15,12 @@ export default function Home() {
 
   function submitForm() {
     /* some function to get parameters */
+
     const params = new URLSearchParams({
       tsunami: 'false',
       earthquake: 'false',
       meteor: 'false',
-      noDisastor: 'false',
+      noDisastor: 'true',
       windSpeed: '10',
       temperature: '10',
       cloudCover: '10',
