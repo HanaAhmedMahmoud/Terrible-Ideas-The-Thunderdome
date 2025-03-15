@@ -25,7 +25,7 @@ Provide a brief overview of your project. What does it do? What problem does it 
 - [Feature 3]
 
 ## How to Run
-Although you won't be able to access the thunderdome explicitly, feel free to view our website on https://tardis-hackathon-6drl.vercel.app/
+Although you won't be able to access the thunderdome explicitly, feel free to view our website on https://terrible-ideas-the-thunderdome.vercel.app/
 
 ## Acknowledgments
 Shoutout to mentors, resources, or anything that helped your team!
