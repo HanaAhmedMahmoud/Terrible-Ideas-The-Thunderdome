@@ -7,7 +7,7 @@ Provide a brief overview of your project. What does it do? What problem does it 
 
 ## Team Members
 - Hana Ahmed-Mahmoud
-- [Team Member 1]
+- Oliver Huang
 - [Team Member 2]
 - [Team Member 3]
 - [Team Member 4]
@@ -15,9 +15,9 @@ Provide a brief overview of your project. What does it do? What problem does it 
 ## Tech Stack/ Skills
 - Frontend: React, Tailwind CSS
 - Backend: Node.js
-- Hardware: 
+- Hardware: Bambu Lab P1S & X1 Carbon, Raspberry Pi 3 Model B+
 - APIs: OpenMeteo
-- Design and Graphics: Canvas
+- Design and Graphics: Canvas, Autodesk Fusion
 
 ## Features
 - [Feature 1]
