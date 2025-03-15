@@ -13,6 +13,7 @@ export default function Stats() {
   const volcanoParam = isTrue(searchParams.get('volcano'));
   const sharknadoParam = isTrue(searchParams.get('sharknado'));
   const noDisastorParam = isTrue(searchParams.get('noDisastor'));
+  const rainParam = searchParams.get('rain');
   const windSpeedParam = searchParams.get('windSpeed');
   const temperatureParam = searchParams.get('temperature');
   const cloudCoverParam = searchParams.get('cloudCover');
@@ -58,6 +59,14 @@ export default function Stats() {
         alt="sun"
         className="z-0"
       />
+    </div>,
+    <div
+      key={4}
+      className="relative flex flex-col items-center w-screen h-screen bg-[url(/images/rain.gif)]"
+    >
+      <h1 className="text-[#a9d8f0] text-5xl mt-100 ">
+        The rain was {rainParam} mm
+      </h1>
     </div>,
   ];
 

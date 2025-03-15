@@ -22,11 +22,12 @@ export default function Home() {
       volcano: 'false',
       earthquake: 'false',
       meteor: 'false',
-      sharknado: 'true',
-      noDisastor: 'false',
+      sharknado: 'false',
+      noDisastor: 'true',
       windSpeed: '10',
       temperature: '10',
       cloudCover: '10',
+      rain: '10',
     });
     router.push(`/stats?${params.toString()}`);
   }
