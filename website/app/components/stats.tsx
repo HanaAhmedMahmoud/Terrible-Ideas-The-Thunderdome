@@ -11,7 +11,7 @@ export default function Stats() {
   const tsunamiParam = isTrue(searchParams.get('tsunami'));
   const earthquakeParam = isTrue(searchParams.get('earthquake'));
   const volcanoParam = isTrue(searchParams.get('volcano'));
-  const meteorParam = isTrue(searchParams.get('meteor'));
+  const sharknadoParam = isTrue(searchParams.get('sharknado'));
   const noDisastorParam = isTrue(searchParams.get('noDisastor'));
   const windSpeedParam = searchParams.get('windSpeed');
   const temperatureParam = searchParams.get('temperature');
@@ -78,7 +78,9 @@ export default function Stats() {
           {/* Video Display Based on Disaster Type */}
           {tsunamiParam && (
             <div className="w-full">
-              <h1 className="text-[#004aad] text-7xl absolute top-0 right-0 m-20">Tsunami</h1>
+              <h1 className="text-[#004aad] text-7xl absolute top-0 right-0 m-20">
+                Tsunami
+              </h1>
               <Image
                 src="/images/tsunami.gif"
                 width={1000}
@@ -86,58 +88,97 @@ export default function Stats() {
                 alt="sun"
                 className="z-0 absolute top-0 right-0"
               />
-            
-              <div className="mt-20 mr-140 flex flex-col justify-center items-center"> 
-              <video width="700" controls>
+
+              <div className="mt-20 mr-140 flex flex-col justify-center items-center">
+                <video width="700" controls>
                   <source src="/videos/tsunami.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
-               </video>
-             </div> 
-            </div> 
+                </video>
+              </div>
+            </div>
           )}
           {earthquakeParam && (
-             <div className="w-full">
-             <h1 className="text-[#ba8602] text-9xl absolute top-0 left-0 m-20">EARTHQUAKE</h1>
-             <Image
-               src="/images/earthquake.gif"
-               width={500}
-               height={200}
-               alt="sun"
-               className="z-0 absolute top-0 right-0 m-20"
-             />
-           
-             <div className="mt-70 mr-140 flex flex-col justify-center items-center"> 
-             <video width="700" controls>
-                 <source src="/videos/earthquake.mp4" type="video/mp4" />
-                 Your browser does not support the video tag.
-              </video>
-            </div> 
-           </div>  
+            <div className="w-full">
+              <h1 className="text-[#ba8602] text-9xl absolute top-0 left-0 m-20">
+                EARTHQUAKE
+              </h1>
+              <Image
+                src="/images/earthquake.gif"
+                width={500}
+                height={200}
+                alt="sun"
+                className="z-0 absolute top-0 right-0 m-20"
+              />
+
+              <div className="mt-70 mr-140 flex flex-col justify-center items-center">
+                <video width="700" controls>
+                  <source src="/videos/earthquake.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
           )}
           {volcanoParam && (
-           <div className="w-full">
-           <h1 className="text-[#ba0e02] text-7xl absolute top-0 left-0 m-20">VOLCANIC ERUPTION</h1>
-           <Image
-             src="/images/volcano.gif"
-             width={700}
-             height={200}
-             alt="sun"
-             className="z-0 absolute top-0 right-0"
-           />
-         
-           <div className="mt-50 mr-150 flex flex-col justify-center items-center"> 
-           <video width="550" controls>
-               <source src="/videos/volcano.mp4" type="video/mp4" />
-               Your browser does not support the video tag.
-            </video>
-          </div> 
-         </div>  
+            <div className="w-full">
+              <h1 className="text-[#ba0e02] text-7xl absolute top-0 left-0 m-20">
+                VOLCANIC ERUPTION
+              </h1>
+              <Image
+                src="/images/volcano.gif"
+                width={700}
+                height={200}
+                alt="sun"
+                className="z-0 absolute top-0 right-0"
+              />
+
+              <div className="mt-50 mr-150 flex flex-col justify-center items-center">
+                <video width="550" controls>
+                  <source src="/videos/volcano.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
           )}
-          {meteorParam && (
-            <video width="800" controls>
-              <source src="/videos/meteor.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+          {sharknadoParam && (
+            <div className="w-full">
+              <h1 className="text-[#004aad] text-7xl absolute top-0 right-0 m-20">
+                SHARKNADO
+              </h1>
+              <Image
+                src="/images/sharknado.gif"
+                width={800}
+                height={200}
+                alt="sun"
+                className="z-0 absolute top-0 right-0"
+              />
+              <Image
+                src="/images/sharknado.gif"
+                width={800}
+                height={200}
+                alt="sun"
+                className="z-0 absolute bottom-0 left-0"
+              />
+              <Image
+                src="/images/sharknado.gif"
+                width={100}
+                height={200}
+                alt="sun"
+                className="z-0 absolute top-0 left-0"
+              />
+              <Image
+                src="/images/sharknado.gif"
+                width={300}
+                height={200}
+                alt="sun"
+                className="z-0 absolute bottom-0 left-0"
+              />
+              <div className="mt-50 mr-150 flex flex-col justify-center items-center">
+                <video width="750" controls>
+                  <source src="/videos/sharknado.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
           )}
 
           {noDisastorParam && (

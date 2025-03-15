@@ -9,6 +9,8 @@ export default function Home() {
     day: '',
     month: '',
     year: '',
+    lat: '',
+    long: '',
   });
 
   const router = useRouter();
@@ -18,8 +20,9 @@ export default function Home() {
     const params = new URLSearchParams({
       tsunami: 'false',
       volcano: 'false',
-      earthquake: 'true',
+      earthquake: 'false',
       meteor: 'false',
+      sharknado: 'true',
       noDisastor: 'false',
       windSpeed: '10',
       temperature: '10',
@@ -34,8 +37,8 @@ export default function Home() {
         ENTER YOUR BIRTHDATE...
       </h1>
 
-      <div className="flex flex-row text-5xl items-center justify-center mb-10">
-        <div className="mx-10 my-10">
+      <div className="flex flex-row text-5xl items-center justify-center mb-2">
+        <div className="mx-10 my-2">
           <input
             className="border border-white border-dashed border-2 h-[350px] w-[300px] text-[280px]"
             value={formData.day}
@@ -69,13 +72,38 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center">
-        <button
-          className="bg-[#a31010] w-[350px] h-[50px] rounded-3xl"
-          onClick={() => submitForm()}
-        >
-          <p className="text-3xl text-black">SUBMIT</p>
-        </button>
+      <div className="flex flex-row justify-between">
+        <div className="flex flex-col justify-content items-center ml-40 mt-10">
+          <h1 className="text-4xl text-[#a31010]">Location:</h1>
+          <div className="flex flex-row my-2">
+            <p className="text-2xl mr-10">Latitude:</p>
+            <input
+              className="border border-white border-dashed border-2 h-[30px] w-[200px] text-2xl"
+              value={formData.lat}
+              onChange={(e) => {
+                setFormData({...formData, lat: e.target.value});
+              }}
+            ></input>
+          </div>
+          <div className="flex flex-row my-2">
+            <p className="text-2xl mr-10">Longitude:</p>
+            <input
+              className="border border-white border-dashed border-2 h-[30px] w-[200px] text-2xl"
+              value={formData.long}
+              onChange={(e) => {
+                setFormData({...formData, long: e.target.value});
+              }}
+            ></input>
+          </div>
+        </div>
+        <div className="flex items-center justify-center mr-30 mt-10">
+          <button
+            className="bg-[#a31010] w-[350px] h-[50px] rounded-3xl"
+            onClick={() => submitForm()}
+          >
+            <p className="text-3xl text-black">SUBMIT</p>
+          </button>
+        </div>
       </div>
     </div>
   );
