@@ -74,26 +74,25 @@ export default function Stats() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div className={`${font.className}`}>
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center relative">
           {/* Video Display Based on Disaster Type */}
           {tsunamiParam && (
-            <div>
-              <h1 className="text-[#004aad] text-7xl relative flex flex-col ml-170 mt-30">Tsunami</h1>
+            <div className="w-full">
+              <h1 className="text-[#004aad] text-7xl absolute top-0 right-0 m-20">Tsunami</h1>
               <Image
                 src="/images/tsunami.gif"
                 width={1000}
                 height={200}
                 alt="sun"
-                className="z-0 absolute top-0 z-10"
+                className="z-0 absolute top-0 right-0"
               />
             
-            <div className="mt-250 flex flex-col justify-center items-center"> 
-             <video width="800" controls>
-                <source src="/videos/tsunami.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div> 
-
+              <div className="mt-20 mr-140 flex flex-col justify-center items-center"> 
+              <video width="700" controls>
+                  <source src="/videos/tsunami.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+               </video>
+             </div> 
             </div> 
             
           )}
