@@ -17,10 +17,10 @@ export default function Home() {
     /* some function to get parameters */
 
     const params = new URLSearchParams({
-      tsunami: 'false',
+      tsunami: 'true',
       earthquake: 'false',
       meteor: 'false',
-      noDisastor: 'true',
+      noDisastor: 'false',
       windSpeed: '10',
       temperature: '10',
       cloudCover: '10',

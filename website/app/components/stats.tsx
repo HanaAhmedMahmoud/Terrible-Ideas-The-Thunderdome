@@ -77,16 +77,32 @@ export default function Stats() {
         <div className="flex flex-col justify-center items-center">
           {/* Video Display Based on Disaster Type */}
           {tsunamiParam && (
-            <video width="800" controls>
-              <source src="/videos/tsunami.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <div>
+              <h1 className="text-[#004aad] text-7xl relative flex flex-col ml-170 mt-30">Tsunami</h1>
+              <Image
+                src="/images/tsunami.gif"
+                width={1000}
+                height={200}
+                alt="sun"
+                className="z-0 absolute top-0 z-10"
+              />
+            
+            <div className="mt-250 flex flex-col justify-center items-center"> 
+             <video width="800" controls>
+                <source src="/videos/tsunami.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div> 
+
+            </div> 
+            
           )}
           {earthquakeParam && (
             <video width="800" controls>
               <source src="/videos/earthquake.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
+            
           )}
           {volcanoParam && (
             <video width="800" controls>
@@ -101,7 +117,7 @@ export default function Stats() {
             </video>
           )}
 
-          {!noDisastorParam && (
+          {noDisastorParam && (
             <div className="relative w-full h-screen flex justify-center items-center overflow-hidden">
               {divs.map((div, index) => (
                 <div
