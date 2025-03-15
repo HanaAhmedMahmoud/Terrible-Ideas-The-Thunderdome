@@ -94,20 +94,44 @@ export default function Stats() {
                </video>
              </div> 
             </div> 
-            
           )}
           {earthquakeParam && (
-            <video width="800" controls>
-              <source src="/videos/earthquake.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            
+             <div className="w-full">
+             <h1 className="text-[#ba0e02] text-7xl absolute top-0 right-0 m-20">EARTHQUAKE</h1>
+             <Image
+               src="/images/earthquake.gif"
+               width={1000}
+               height={200}
+               alt="sun"
+               className="z-0 absolute top-0 right-0"
+             />
+           
+             <div className="mt-20 mr-140 flex flex-col justify-center items-center"> 
+             <video width="700" controls>
+                 <source src="/videos/earthquake.mp4" type="video/mp4" />
+                 Your browser does not support the video tag.
+              </video>
+            </div> 
+           </div>  
           )}
           {volcanoParam && (
-            <video width="800" controls>
-              <source src="/videos/volcano.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
+           <div className="w-full">
+           <h1 className="text-[#ba0e02] text-7xl absolute top-0 left-0 m-20">VOLCANIC ERUPTION</h1>
+           <Image
+             src="/images/volcano.gif"
+             width={700}
+             height={200}
+             alt="sun"
+             className="z-0 absolute top-0 right-0"
+           />
+         
+           <div className="mt-50 mr-150 flex flex-col justify-center items-center"> 
+           <video width="550" controls>
+               <source src="/videos/volcano.mp4" type="video/mp4" />
+               Your browser does not support the video tag.
             </video>
+          </div> 
+         </div>  
           )}
           {meteorParam && (
             <video width="800" controls>

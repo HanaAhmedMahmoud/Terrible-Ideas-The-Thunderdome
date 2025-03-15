@@ -15,9 +15,9 @@ export default function Home() {
 
   function submitForm() {
     /* some function to get parameters */
-
     const params = new URLSearchParams({
-      tsunami: 'true',
+      tsunami: 'false',
+      volcano: 'true',
       earthquake: 'false',
       meteor: 'false',
       noDisastor: 'false',
