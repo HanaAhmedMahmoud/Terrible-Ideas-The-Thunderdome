@@ -1,7 +1,7 @@
 'use client';
 import {useSearchParams} from 'next/navigation';
 import {font} from '../fonts';
-import {useEffect, useState} from 'react';
+import {Suspense, useEffect, useState} from 'react';
 import Image from 'next/image';
 
 export default function Stats() {
@@ -52,50 +52,52 @@ export default function Stats() {
   }, []);
 
   return (
-    <div className={`${font.className}`}>
-      <div className="flex flex-col justify-center items-center">
-        {/* Video Display Based on Disaster Type */}
-        {tsunamiParam && (
-          <video width="800" controls>
-            <source src="/videos/tsunami.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        )}
-        {earthquakeParam && (
-          <video width="800" controls>
-            <source src="/videos/earthquake.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        )}
-        {volcanoParam && (
-          <video width="800" controls>
-            <source src="/videos/volcano.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        )}
-        {meteorParam && (
-          <video width="800" controls>
-            <source src="/videos/meteor.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        )}
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className={`${font.className}`}>
+        <div className="flex flex-col justify-center items-center">
+          {/* Video Display Based on Disaster Type */}
+          {tsunamiParam && (
+            <video width="800" controls>
+              <source src="/videos/tsunami.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          )}
+          {earthquakeParam && (
+            <video width="800" controls>
+              <source src="/videos/earthquake.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          )}
+          {volcanoParam && (
+            <video width="800" controls>
+              <source src="/videos/volcano.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          )}
+          {meteorParam && (
+            <video width="800" controls>
+              <source src="/videos/meteor.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          )}
 
-        {!noDisastorParam && (
-          <div className="relative w-full h-screen flex justify-center items-center overflow-hidden">
-            {divs.map((div, index) => (
-              <div
-                key={index}
-                className={`absolute transition-opacity duration-1000 ${
-                  index === currentIndex ? 'opacity-100' : 'opacity-0'
-                }`}
-              >
-                {div}
-              </div>
-            ))}
-          </div>
-        )}
+          {!noDisastorParam && (
+            <div className="relative w-full h-screen flex justify-center items-center overflow-hidden">
+              {divs.map((div, index) => (
+                <div
+                  key={index}
+                  className={`absolute transition-opacity duration-1000 ${
+                    index === currentIndex ? 'opacity-100' : 'opacity-0'
+                  }`}
+                >
+                  {div}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </Suspense>
   );
 }
 
