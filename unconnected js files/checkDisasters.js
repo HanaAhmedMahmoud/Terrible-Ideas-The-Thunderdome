@@ -4,6 +4,26 @@ const month = 5
 const day = 21
 
 
+function checkNaturalDisaster(year, month, day) {
+  const hasTsunami = checkTsunami(year, month, day)
+  const hasEarthquake = checkEarthquake(year, month, day)
+  const hasVolcano = checkVolcano(year, month, day)
+  return {
+    "tsunami": hasTsunami,
+    "earthquake": hasEarthquake,
+    "volcano": hasVolcano,
+    "noDisastor": !(hasTsunami || hasVolcano || hasEarthquake),
+    "windSpeed": "temp",
+    "temperature": "temp",
+    "cloudCover": "temp"
+  }
+
+  }
+
+
+
+  
+
 function checkEarthquake(year, month, day) {
     fs.readFile('./earthquake.csv', 'utf8', (err, data) => {
         if (err) {
@@ -88,6 +108,4 @@ function checkVolcano(year, month, day) {
     return false
 }
 
-const hasEarthquake = checkEarthquake(year, month, day)
-const hasTsunami = checkTsunami(year, month, day)
-const hasVolcano = checkVolcano(year, month, day)
+console.log(checkNaturalDisaster(year, month, day))
