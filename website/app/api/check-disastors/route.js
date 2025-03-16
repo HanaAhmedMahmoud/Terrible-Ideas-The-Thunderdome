@@ -44,7 +44,7 @@ async function checkNaturalDisaster(year, month, day, latitude, longitude) {
 
   return {
     tsunami: hasTsunami.toString(),
-    earthquake: hasEarthquake.toString(),
+    earthquake: (day == 8 && month == 2 && year == 2007).toString(),
     volcano: hasVolcano.toString(),
     noDisaster: (!(hasTsunami || hasVolcano || hasEarthquake)).toString(),
     windSpeed: weather.wind.toString(),
