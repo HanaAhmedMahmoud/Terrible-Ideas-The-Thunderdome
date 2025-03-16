@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import {useState} from 'react';
-import {font} from '../fonts';
-import {useRouter} from 'next/navigation';
+import { useState } from "react";
+import { font } from "../fonts";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [formData, setFormData] = useState({
-    day: '',
-    month: '',
-    year: '',
-    lat: '',
-    long: '',
+    day: "",
+    month: "",
+    year: "",
+    lat: "",
+    long: "",
   });
 
   const router = useRouter();
@@ -18,16 +18,16 @@ export default function Home() {
   function submitForm() {
     /* some function to get parameters */
     const params = new URLSearchParams({
-      tsunami: 'false',
-      volcano: 'false',
-      earthquake: 'false',
-      meteor: 'false',
-      sharknado: 'false',
-      noDisastor: 'true',
-      windSpeed: '10',
-      temperature: '10',
-      cloudCover: '10',
-      rain: '10',
+      tsunami: "false",
+      volcano: "false",
+      earthquake: "false",
+      meteor: "false",
+      sharknado: "false",
+      noDisastor: "true",
+      windSpeed: "10",
+      temperature: "10",
+      cloudCover: "10",
+      rain: "10",
     });
     router.push(`/stats?${params.toString()}`);
   }
@@ -44,7 +44,7 @@ export default function Home() {
             className="border border-white border-dashed border-2 h-[350px] w-[300px] text-[280px]"
             value={formData.day}
             onChange={(e) => {
-              setFormData({...formData, day: e.target.value});
+              setFormData({ ...formData, day: e.target.value });
             }}
           ></input>
           <h2 className="mx-10 mt-2 text-[#ffbd59] text-center ">DAY</h2>
@@ -55,7 +55,7 @@ export default function Home() {
             className="border border-white border-dashed border-2 h-[350px] w-[300px] text-[280px]"
             value={formData.month}
             onChange={(e) => {
-              setFormData({...formData, month: e.target.value});
+              setFormData({ ...formData, month: e.target.value });
             }}
           ></input>
           <h2 className="mx-10 mt-2 text-[#ffbd59] text-center">MONTH</h2>
@@ -63,10 +63,10 @@ export default function Home() {
 
         <div className="mx-10">
           <input
-            className="border border-white border-dashed border-2 h-[350px] w-[300px] text-[280px]"
+            className="border border-white border-dashed border-2 h-[350px] w-[500px] text-[280px]"
             value={formData.year}
             onChange={(e) => {
-              setFormData({...formData, year: e.target.value});
+              setFormData({ ...formData, year: e.target.value });
             }}
           ></input>
           <h2 className="mx-10 mt-2 text-[#ffbd59] text-center">YEAR</h2>
@@ -82,7 +82,7 @@ export default function Home() {
               className="border border-white border-dashed border-2 h-[30px] w-[200px] text-2xl"
               value={formData.lat}
               onChange={(e) => {
-                setFormData({...formData, lat: e.target.value});
+                setFormData({ ...formData, lat: e.target.value });
               }}
             ></input>
           </div>
@@ -92,7 +92,7 @@ export default function Home() {
               className="border border-white border-dashed border-2 h-[30px] w-[200px] text-2xl"
               value={formData.long}
               onChange={(e) => {
-                setFormData({...formData, long: e.target.value});
+                setFormData({ ...formData, long: e.target.value });
               }}
             ></input>
           </div>
@@ -109,4 +109,3 @@ export default function Home() {
     </div>
   );
 }
-
