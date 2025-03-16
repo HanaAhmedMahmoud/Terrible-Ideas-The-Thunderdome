@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import {font} from './fonts';
 
 export default function Start() {
