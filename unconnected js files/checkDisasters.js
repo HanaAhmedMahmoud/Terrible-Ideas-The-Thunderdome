@@ -4,26 +4,27 @@ import https from 'https'
 const year = 1964
 const month = 5
 const day = 21
+const latitude = 1
+const longitude = 1
 
 
-function checkNaturalDisaster(year, month, day) {
+async function checkNaturalDisaster(year, month, day, latitude, longitude) {
   const hasTsunami = checkTsunami(year, month, day)
   const hasEarthquake = checkEarthquake(year, month, day)
   const hasVolcano = checkVolcano(year, month, day)
+  const otherWeather = await getWeatherConditions(year, month, day, latitude, longitude)
   return {
-    "tsunami": hasTsunami,
-    "earthquake": hasEarthquake,
-    "volcano": hasVolcano,
-    "noDisastor": !(hasTsunami || hasVolcano || hasEarthquake),
-    "windSpeed": "temp",
-    "temperature": "temp",
-    "cloudCover": "temp",
+    "tsunami": hasTsunami.toString(),
+    "earthquake": hasEarthquake.toString(),
+    "volcano": hasVolcano.toString(),
+    "noDisastor": (!(hasTsunami || hasVolcano || hasEarthquake)).toString(),
+    "windSpeed": otherWeather.wind.toString(),
+    "temperature": otherWeather.temperature.toString(),
+    "cloudCover": otherWeather.clouds.toString(),
     "sharknado": year == 2013 && month == 7 && day == 11 ? "true": "false"
   }
 
   }
-
-
 
   async function getWeatherConditions(year, month, day, longitude, latitude) {
     const formattedDate = `${year.toString().padStart(2, "0")}-${month.toString().padStart(2, "0")}-${day.toString().padStart(2, "0")}`;
@@ -56,7 +57,7 @@ function checkNaturalDisaster(year, month, day) {
               temperature: temp,
               wind: wind,
               rain: rain,
-              clouds: cloud_cover
+              clouds: cloud_cover,
             };
   
             resolve(data_object);
@@ -69,8 +70,6 @@ function checkNaturalDisaster(year, month, day) {
       });
     });
   }
-
-
 
 
 
@@ -160,6 +159,4 @@ function checkVolcano(year, month, day) {
     return false
 }
 
-// console.log(checkNaturalDisaster(year, month, day))
-
-console.log(await getWeatherConditions(year, month, day, 1, 1))
+console.log(await checkNaturalDisaster(year, month, day, latitude, longitude))
