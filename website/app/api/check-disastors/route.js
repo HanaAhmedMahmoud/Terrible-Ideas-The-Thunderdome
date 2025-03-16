@@ -89,15 +89,15 @@ async function getWeatherConditions(year, month, day, latitude, longitude) {
 
 // Functions to check for disasters
 async function checkEarthquake(year, month, day) {
-  return checkCSVForDisaster('earthquake.csv', year, month, day);
+  return checkCSVForDisaster('../public/csvs/earthquake.csv', year, month, day);
 }
 
 async function checkTsunami(year, month, day) {
-  return checkCSVForDisaster('tsunami.csv', year, month, day);
+  return checkCSVForDisaster('../public/csvs/tsunami.csv', year, month, day);
 }
 
 async function checkVolcano(year, month, day) {
-  return checkCSVForDisaster('volcano.csv', year, month, day);
+  return checkCSVForDisaster('../public/csvs/volcano.csv', year, month, day);
 }
 
 // General function to check CSV files
