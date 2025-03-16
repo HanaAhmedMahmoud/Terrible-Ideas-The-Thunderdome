@@ -1,5 +1,7 @@
 import fs from 'node:fs';
-const year = 1963
+import https from 'https'
+
+const year = 1964
 const month = 5
 const day = 21
 
@@ -15,10 +17,60 @@ function checkNaturalDisaster(year, month, day) {
     "noDisastor": !(hasTsunami || hasVolcano || hasEarthquake),
     "windSpeed": "temp",
     "temperature": "temp",
-    "cloudCover": "temp"
+    "cloudCover": "temp",
+    "sharknado": year == 2013 && month == 7 && day == 11 ? "true": "false"
   }
 
   }
+
+
+
+  async function getWeatherConditions(year, month, day, longitude, latitude) {
+    const formattedDate = `${year.toString().padStart(2, "0")}-${month.toString().padStart(2, "0")}-${day.toString().padStart(2, "0")}`;
+  
+    const options = {
+      hostname: 'archive-api.open-meteo.com',
+      port: 443,
+      path: `/v1/archive?latitude=${latitude}&longitude=${longitude}&start_date=${formattedDate}&end_date=${formattedDate}&hourly=temperature_2m,wind_speed_10m,rain,cloud_cover`,
+      method: 'GET',
+      family: 4 // Force IPv4
+    };
+  
+    return new Promise((resolve, reject) => {
+      https.get(options, (res) => {
+        let data = '';
+  
+        res.on('data', (chunk) => {
+          data += chunk;
+        });
+  
+        res.on('end', () => {
+          try {
+            const returnedData = JSON.parse(data);
+            const temp = returnedData.hourly.temperature_2m[10];
+            const wind = returnedData.hourly.wind_speed_10m[10];
+            const rain = returnedData.hourly.rain[10];
+            const cloud_cover = returnedData.hourly.cloud_cover[10];
+  
+            const data_object = {
+              temperature: temp,
+              wind: wind,
+              rain: rain,
+              clouds: cloud_cover
+            };
+  
+            resolve(data_object);
+          } catch (error) {
+            reject(`Parsing error: ${error.message}`);
+          }
+        });
+      }).on('error', (err) => {
+        reject(`Request error: ${err.message}`);
+      });
+    });
+  }
+
+
 
 
 
@@ -108,4 +160,6 @@ function checkVolcano(year, month, day) {
     return false
 }
 
-console.log(checkNaturalDisaster(year, month, day))
+// console.log(checkNaturalDisaster(year, month, day))
+
+console.log(await getWeatherConditions(year, month, day, 1, 1))
