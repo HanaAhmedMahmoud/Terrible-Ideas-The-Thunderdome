@@ -15,7 +15,7 @@ Provide a brief overview of your project. What does it do? What problem does it 
 ## Tech Stack/ Skills
 - Frontend: React, Tailwind CSS
 - Backend: Node.js
-- Hardware: Bambu Lab P1S & X1 Carbon, Raspberry Pi 3 Model B+
+- Hardware: Bambu Lab P1P & X1 Carbon, Raspberry Pi 3 Model B+, Acer EI242QR
 - APIs: OpenMeteo
 - Design and Graphics: Canvas, Autodesk Fusion
 
