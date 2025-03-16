@@ -1,16 +1,16 @@
 # The Thunderdome 
 
-## Project Description
-Provide a brief overview of your project. What does it do? What problem does it aim to solve?
+## What is the Thunderdome?
+A fully immersive weather system capable of recalling and simulating weather conditions from any time and anywhere.
 
 ## Demonstration
 
 ## Team Members
-- Hana Ahmed-Mahmoud
+- Austin Sarney
 - Oliver Huang
-- [Team Member 2]
-- [Team Member 3]
-- [Team Member 4]
+- Amelie Harvey
+- Cooper Ellis
+- Hana Ahmed-Mahmoud
 
 ## Tech Stack/ Skills
 - Frontend: React, Tailwind CSS
@@ -20,13 +20,14 @@ Provide a brief overview of your project. What does it do? What problem does it 
 - Design and Graphics: Canvas, Autodesk Fusion
 
 ## Features
-- [Feature 1]
-- [Feature 2]
-- [Feature 3]
+- Wettification
+- Easter Eggs! (11/07/2013)
+- Sturdy Design ;)
 
 ## How to Run
 Although you won't be able to access the thunderdome explicitly, feel free to view our website on https://terrible-ideas-the-thunderdome.vercel.app/
 
 ## Acknowledgments
-Shoutout to mentors, resources, or anything that helped your team!
+thank
+Thank you Terrible Hack!
 
